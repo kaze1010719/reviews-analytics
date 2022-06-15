@@ -15,7 +15,7 @@ print(data[1])
 
 sum_len = 0
 for d in data:
-	sum_len += len(d)
+	sum_len += len(d) #d是指字母數，the是三個字
 
 print('留言的平均長度為', sum_len / len(data))
 
@@ -35,3 +35,11 @@ for d in data:
 		good.append(d)
 print('一共有', len(good), '筆留言提到good')
 print(good[0])
+
+good = [d for d in data if 'good' in d] # 清單快寫法 List comprehension
+
+bad = ['bad' in d for d in data]
+
+bad = []
+for d in data:
+	bad.append('bad' in d) # bad in d 是 True/False
